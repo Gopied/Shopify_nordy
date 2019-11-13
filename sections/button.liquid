@@ -1,0 +1,43 @@
+<hr>
+<div id="section-cta">
+    <a href="{{ section.settings.link }}" class="button">{{ section.settings.linktext }}</a>
+</div>
+<hr>
+
+{% schema %}
+{
+  "name": "Button",
+  "settings": [
+    {
+      "id": "text-box",
+      "type": "text",
+      "label": "Heading",
+      "default": "Title"
+    },
+    {
+      "id": "link",
+      "type": "url",
+      "label": "Button link"
+    },
+    {
+      "id": "linktext",
+      "type": "text",
+      "label": "Button text",
+      "default": "Back Office"
+    }
+  ]
+  ,
+  "presets": [
+    {
+      "name": "Bouton",
+      "category": "Nouveau Bouton"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
