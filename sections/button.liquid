@@ -1,6 +1,8 @@
 <hr>
 <div id="section-cta">
-    <a href="{{ section.settings.link }}" class="button">{{ section.settings.linktext }}</a>
+    <div class="buttonContainer">
+    <a href="{{ section.settings.link }}" class="button" style="color: {{ section.settings.colortxt}}; background-color: {{section.settings.colorbtn}};" >{{ section.settings.linktext }}</a>
+    </div>
 </div>
 <hr>
 
@@ -23,7 +25,19 @@
       "id": "linktext",
       "type": "text",
       "label": "Button text",
-      "default": "Back Office"
+      "default": "Clique ici"
+    },
+    {
+        "id": "colortxt",
+        "type": "color",
+        "label": "couleur du texte ",
+        "default": "#FFFFFF"
+    },
+    {
+        "id": "colorbtn",
+        "type": "color",
+        "label": "couleur du bouton",
+        "default": "#000000"
     }
   ]
   ,
