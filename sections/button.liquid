@@ -1,61 +1,68 @@
-<hr>
-<div id="section-cta">
-    <div class="buttonContainer">
-    <a href="{{ section.settings.link }}" class="button" style="color: {{ section.settings.colortxt}}; background-color: {{section.settings.colorbtn}}; width: {{section.settings.taillebtn}}" >{{ section.settings.linktext }}</a>
-    </div>
+
+<div id="section-button">
+  <div class="container">
+      <a href="{{ section.settings.button }}" 
+          class="button" 
+          style="
+          color : {{ section.settings.color_btn }}; 
+          background-color: {{ section.settings.background_color_btn}}; 
+          font-size: {{ section.settings.height_btn }}px; ">
+          {{ section.settings.textbutton }}
+      </a>
+  </div>
 </div>
-<hr>
 
 {% schema %}
 {
   "name": "Button",
   "settings": [
-    
-    {
-      "id": "link",
-      "type": "url",
-      "label": "Button link"
-    },
-    {
-      "type": "text",
-      "label": "Button text",
-      "default": "Clique ici"
-    },
-    {
-        "id": "colortxt",
-        "type": "color",
-        "label": "couleur du texte ",
-        "default": "#FFFFFF"
-    },
-    {
-        "id": "colorbtn",
-        "type": "color",
-        "label": "couleur du bouton",
-        "default": "#000000"
-    },
-    {
-        "id": "taillebtn",
-        "type": "range",
-        "min": 10,
-        "max": 30,
-        "step": 1,
-        "unit": "px",
-        "label": "Taille du bouton",
-        "default": 15
-    }
+      {
+          "id": "bouton",
+          "type": "text",
+          "label": "Bouton",
+          "default": "Bouton"
+      },
+      {
+          "id": "textbutton",
+          "type": "text",
+          "label": "Texte",
+          "default": "Clique Ici"
+      },
+      {
+          "type": "color",
+          "id": "color_btn",
+          "label": "Couleur du texte",
+          "default": "#FFFFFF"
+      },
+      {
+          "type": "color",
+          "id": "background_color_btn",
+          "label": "Couleur de fond",
+          "default": "#000000"
+      },
+      {
+          "type": "range",
+          "id": "height_btn",
+          "label": "Taille",
+          "min": 5,
+          "max": 70,
+          "default": 25,
+          "unit": "px",
+          "step": 1
+      }
+
   ]
   ,
   "presets": [
-    {
-      "name": "Bouton",
-      "category": "Nouveau Bouton"
-    }
+      {
+          "name": "Bouton",
+          "category":"Cours IIM"
+
+      }
   ]
 }
 {% endschema %}
 
 {% stylesheet %}
+  
 {% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}

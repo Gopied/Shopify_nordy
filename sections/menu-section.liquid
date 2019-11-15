@@ -1,0 +1,35 @@
+<img src="{{section.settings.image_menu | img_url: 'master' }}" alt="">
+
+
+<nav class="myNavbar>
+    <ul>
+        {% for link in linklists[section.settings.menu-iim].links %}
+        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+        {% endfor %}
+    </ul>
+</nav>
+
+{% schema %}
+{
+    "name": "Menu",
+    "settings": [
+        {
+            "id": "menu-iim",
+            "type": "link_list",
+            "label": "Menu",
+            "default": "main-menu"
+        },
+        {
+            "id": "image_menu",
+            "type": "image_picker",
+            "label": "Image"
+        }
+    ],
+    "presets": [
+        {
+            "category": "Cours IIM",
+            "name": "Menu"
+        }
+    ]
+}
+{% endschema %}
