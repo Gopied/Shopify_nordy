@@ -1,7 +1,6 @@
-<img src="{{section.settings.image_menu | img_url: 'master' }}" alt="">
+ <img src="{{section.settings.image_menu | img_url: 'master' }}" alt=""> 
 
-
-<nav class="myNavbar>
+<nav class="myNavbar">
     <ul>
         {% for link in linklists[section.settings.menu-iim].links %}
         <li><a href="{{ link.url }}">{{ link.title }}</a></li>
